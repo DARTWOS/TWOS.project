@@ -9,19 +9,24 @@
 # 4. You continue this process until you’ve made 100 rounds around the cats (e.g., you only visit the 100th cat).
 # Write a program that simply outputs which cats have hats at the end.
 
-
 cats = []
+cats_in_hats =[]
 b = 'no'
 for a in range(100):
  cats.append(b)
-print(cats)
+
 for a in range(100):
- for x in range(a, len(cats), a + 1):
+ for x in range(a, len(cats), a +1):
   if cats[x] == 'no':
    cats[x] = 'yes'
   else:
    cats[x] = 'no'
- print(a+1, cats[99])
+
+
+for x in range(0, len(cats)):
+ if cats[x] == 'yes':
+  cats_in_hats.append(x+1)
+print('there will be cats in hats with numbers', cats_in_hats)
 
 
 
